@@ -31,10 +31,6 @@ describe('enhancer.js', () => {
             expect(enhancer.fail({enhancement: 10, durability: 80}).durability).toBe(75);
             expect(enhancer.fail({enhancement: 14, durability: 85}).durability).toBe(80);
         })
-        it('decrease item durbility by 10 if item enhancement is less than 15', () => {
-            expect(enhancer.fail({enhancement: 10, durability: 80}).durability).toBe(75);
-            expect(enhancer.fail({enhancement: 14, durability: 85}).durability).toBe(80);
-        })
         it('decrease item durbility by 10 if item enhancement is 15 or 16', () => {
             expect(enhancer.fail({enhancement: 15, durability: 70}).durability).toBe(60);
             expect(enhancer.fail({enhancement: 16, durability: 75}).durability).toBe(65);
